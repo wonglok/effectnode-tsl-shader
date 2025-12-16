@@ -1,7 +1,12 @@
 import { useCallback } from 'react';
 import { AppContext, type AppInitStateType } from '../../lib/components/canvas/CanvasEditor/AppContext';
 import { EditorGUI } from '../../lib/components/canvas/CanvasEditor/EditorGUI';
+
 export function StudioPage() {
+    //
+
+    //
+
     let onChange = useCallback((now: Partial<AppInitStateType> | any, before: Partial<AppInitStateType> | any) => {
         //
 

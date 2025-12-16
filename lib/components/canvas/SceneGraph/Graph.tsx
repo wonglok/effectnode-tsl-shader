@@ -1,11 +1,8 @@
-import { addEdge, applyEdgeChanges, applyNodeChanges, Background, MiniMap, ReactFlow, Controls } from '@xyflow/react';
-import { EachPatch, useStoreOfApp } from '../CanvasEditor/AppContext';
+import { addEdge, applyEdgeChanges, applyNodeChanges, Background, ReactFlow, Controls } from '@xyflow/react';
+import { type EachPatch, useStoreOfApp } from '../CanvasEditor/AppContext';
 import { useCallback } from 'react';
 // @ts-ignore
-import { nodeTypes, edgeTypes } from './Autoloader.jsx';
-// import {  } from 'three';
-
-// console.log(nodeTypes);
+import { nodeTypes, edgeTypes } from './Autoloader.tsx';
 
 export function Graph({ patch }: { patch: EachPatch }) {
     const useMyStore = useStoreOfApp();

@@ -11,10 +11,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "nipplejs": "^0.10.2",
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@monaco-editor/react": "^4.7.0",
     "@popperjs/core": "^2.11.8",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-separator": "^1.1.8",
@@ -25,6 +25,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "@types/md5": "^2.3.6",
     "@types/three": "^0.182.0",
+    "@types/uuid": "^11.0.0",
     "@xyflow/react": "^12.10.0",
     "@zip.js/zip.js": "^2.8.11",
     "build": "^0.1.4",
@@ -36,6 +37,7 @@
     "localforage": "^1.10.0",
     "lucide-react": "^0.561.0",
     "md5": "^2.3.0",
+    "nipplejs": "^0.10.2",
     "react": "^19.2.3",
     "react-colorful": "^5.6.1",
     "react-dom": "^19.2.3",
@@ -43,6 +45,7 @@
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",
     "three": "^0.182.0",
+    "uuid": "^13.0.0",
     "vite-plugin-dts": "^4.5.4"
   },
   "devDependencies": {

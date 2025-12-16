@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 // import { Register } from './pages/Register.tsx';
 import { LandingPage } from './pages/LandingPage.tsx';
 import { StudioPage } from './pages/StudioPage.tsx';
+
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(

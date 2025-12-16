@@ -1,4 +1,4 @@
-import { EachPatch, useApp } from '../CanvasEditor/AppContext';
+import { type EachPatch, useApp } from '../CanvasEditor/AppContext';
 import { Graph } from './Graph';
 
 export function EditGraph() {

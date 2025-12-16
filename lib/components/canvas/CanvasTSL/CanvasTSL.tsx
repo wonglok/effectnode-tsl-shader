@@ -1,19 +1,9 @@
 'use client';
 
 import * as THREE from 'three/webgpu';
-import { Canvas, extend, ThreeToJSXElements } from '@react-three/fiber';
-// import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
-// @ts-ignore
-import { DayTimeControls, EffectsSSGI, getZustand, ZustandStore, ZustandStoreInitValues } from './EffectsSSGI';
+import { Canvas, extend, type ThreeToJSXElements } from '@react-three/fiber';
 import { DRACOLoader, GLTFLoader, HDRLoader } from 'three/examples/jsm/Addons.js';
 import { useRef } from 'react';
-import { useApp } from '../CanvasEditor/AppContext';
-
-// import { Suspense } from 'react';
-// import { GLBContent } from './GLBContent';
-// import { transformGLB } from '../../lib/transformGLB.js'
-// import { compress } from '@/app/actions/compress'
-
 declare module '@react-three/fiber' {
     interface ThreeElements extends ThreeToJSXElements<typeof THREE> {}
 }
@@ -27,20 +17,18 @@ draco.setDecoderPath(`/assets/draco/`);
 export let glbLoader = new GLTFLoader();
 glbLoader.setDRACOLoader(draco);
 
-export const CanvasTSL: any = ({ eventSource = null, children }: { eventSource?: any; children?: any }) => {
+export const CanvasTSL: any = ({ children }: { children?: any }) => {
     //
     let ref = useRef<HTMLDivElement>(null);
     //
-    let render = useApp((r) => r.render);
-    //
 
-    let dpr = typeof window !== 'undefined' ? window?.devicePixelRatio || 1 : 1;
+    // let dpr = typeof window !== 'undefined' ? window?.devicePixelRatio || 1 : 1;
 
-    if (dpr >= 2) {
-        dpr = dpr / 2;
-    } else if (dpr > 1) {
-        dpr = 1;
-    }
+    // if (dpr >= 2) {
+    //     dpr = dpr / 2;
+    // } else if (dpr > 1) {
+    //     dpr = 1;
+    // }
 
     // if (render === 'bloom') {
     //     dpr = typeof window !== 'undefined' ? window?.devicePixelRatio || 1 : 1;
@@ -51,15 +39,15 @@ export const CanvasTSL: any = ({ eventSource = null, children }: { eventSource?:
             <div className='w-full h-full relative' ref={ref}>
                 <Canvas
                     //
-                    dpr={[1, dpr]}
+                    // dpr={[1, dpr]}
                     shadows='soft'
                     gl={async (props: any): Promise<any> => {
                         const renderer = new THREE.WebGPURenderer({
                             multiview: true,
                             ...(props as any),
-                            antialias: render === 'basic' ? true : false,
-                            alpha: false,
-                            depth: render === 'basic' ? true : false,
+                            antialias: true,
+                            alpha: true,
+                            depth: true,
                             toneMapping: THREE.NoToneMapping,
                             // multiview: true,
                             requiredLimits: {
@@ -78,7 +66,7 @@ export const CanvasTSL: any = ({ eventSource = null, children }: { eventSource?:
                             renderer.setSize(rect.width, rect.height, true);
                         }
 
-                        renderer.setPixelRatio(dpr);
+                        // renderer.setPixelRatio(dpr);
 
                         renderer.shadowMap.enabled = true;
                         renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -88,22 +76,10 @@ export const CanvasTSL: any = ({ eventSource = null, children }: { eventSource?:
                         return renderer;
                     }}
                 >
-                    <EffectsSSGI></EffectsSSGI>
+                    {/* <EffectsSSGI></EffectsSSGI> */}
                     {children}
                 </Canvas>
             </div>
         </>
     );
 };
-
-export function DayTimelineHUD() {
-    return (
-        <>
-            <div className=' absolute bottom-0 left-0 w-full flex flex-col justify-center items-center'>
-                <DayTimeControls></DayTimeControls>
-            </div>
-        </>
-    );
-}
-
-//

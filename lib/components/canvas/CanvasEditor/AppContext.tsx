@@ -12,55 +12,6 @@ import { create } from 'zustand';
 const getDataTemplate = () => {
     return {
         //
-        hdrURL: `https://d2upc1jytt7esc.cloudfront.net/resource/hdr/the_sky_is_on_fire_1k.hdr`,
-        // hdrURL: `/assets/hdr/bryanston_park_sunrise_1k.hdr`,
-
-        // placeURL: `/assets/place/home-v02.glb`,
-        // placeURL: `/assets/place/lok-church-2.glb`,
-        placeURL: `/assets/place/scifi-transformed.glb`,
-        // placeURL: `/assets/place/exhitibition.glb`,
-        // placeURL: `/assets/place/hall-02.glb`,
-
-        // rpm
-        avatarURL: `/assets/non-rpm/rpm/mall-guy.glb`,
-        avatarBoneFix: true,
-        avatarScale: 1.0,
-        avatarOffsetY: -0.8,
-        avatarRotX: 0,
-
-        // // ai gen
-        // avatarURL: `/assets/non-rpm/ava/swat-raw-transformed.glb`,
-        // avatarBoneFix: true,
-        // avatarScale: 0.5,
-        // avatarOffsetY: -0.45,
-
-        // temp data
-        cameraTempLocation: [0, 0, 0],
-        avatarTempLocation: [0, 0, 0],
-        avatarTempRotY: 0,
-
-        // playerRotY: 0.0 * Math.PI,
-        // playerStart: [-0.08599137957061556, 0.8000419616699219, -23.439400274184976],
-        // cameraStart: [-0.17773938264989078, 1.0803322058756253, -21.742451232274437],
-
-        ...{
-            playerRotY: 0,
-            playerStart: [0, 0.795, 0],
-            cameraStart: [0.169, 3.701, -4.153],
-        },
-
-        //
-        render: 'ssgi',
-
-        timeOfDay: 1,
-        orbitOfSun: 0.25,
-
-        isAnimatingLight: true,
-        isAnimatingOrbit: true,
-
-        readyRender: true,
-
-        isScreenMotion: false,
 
         patches: [] as EachPatch[],
     };

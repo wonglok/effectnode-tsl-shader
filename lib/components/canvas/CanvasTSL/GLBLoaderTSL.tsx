@@ -5,13 +5,11 @@ import { useGLTF } from '@react-three/drei';
 import { clone } from 'three/examples/jsm/utils/SkeletonUtils.js';
 // @ts-ignore
 import md5 from 'md5';
-import { Group } from 'three/webgpu';
-import { v4 } from 'uuid';
-// import { useFrame, useThree } from '@react-three/fiber'
-// import { DoubleSide } from 'three/webgpu';
-// import { Bvh } from '@react-three/drei'
+import { annotateGLTFWithHashes } from '../PatchTSL/annotateGLTFWithHashes';
 
-export function GLBLoaderTSL({ src, shadow = true, onItems = (v) => {} }: { shadow?: boolean; src: string; onItems?: ({ items }: any) => void }) {
+//
+
+export function GLBLoaderTSL({ src, shadow = true }: { shadow?: boolean; src: string }) {
     let glb = useGLTF(src);
     glb.scene = useMemo(() => {
         return clone(glb.scene) as any;
@@ -24,23 +22,7 @@ export function GLBLoaderTSL({ src, shadow = true, onItems = (v) => {} }: { shad
 
     useEffect(() => {
         let run = async () => {
-            let array: any[] = [];
-            let glbScene = glb.scene as Group;
-            glbScene.traverse((it: any) => {
-                if (it.geometry && it.material) {
-                    it.matchID = `${md5(it.name + it.type + it.material.name + it.material.type + it.geometry.name + it.geometry.type + it.geometry.attributes.position.count)}`;
-                    it.userData.matchID = it.matchID;
-
-                    array.push({
-                        _id: `${v4()}`,
-                        name: it.name,
-                        type: it.type,
-                        matchID: it.matchID,
-                    });
-                }
-            });
-
-            onItems({ items: array, glbScene: glb.scene });
+            annotateGLTFWithHashes(glb);
 
             // let glb = await glbLoader.loadAsync(`${src}`);
 
@@ -93,7 +75,7 @@ export function GLBLoaderTSL({ src, shadow = true, onItems = (v) => {} }: { shad
             //
             //
         };
-    }, [glb]);
+    }, [glb, shadow]);
 
     return (
         <>

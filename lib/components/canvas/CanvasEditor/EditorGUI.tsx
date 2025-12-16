@@ -1,21 +1,17 @@
 'use client';
 
-import { DayTimeControls, EnvLight, OrbitSunControls } from '../CanvasTSL/EffectsSSGI';
 import { CanvasTSL } from '../CanvasTSL/CanvasTSL';
 import { useApp, useStoreOfApp } from './AppContext';
-import { RenderOptions } from '../CanvasTSL/RenderOptions';
-import { HDRSearch } from '../HDRSerach/HDRSearch';
-import { SceneGraphGUI } from '../SceneGraph/SceneGraphGUI';
-import { EditGraph } from '../SceneGraph/EditGraph';
 import { ApplyGraphToScene } from '../SceneGraph/ApplyGraphToScene';
-import { CircleXIcon } from 'lucide-react';
-import { useEffect } from 'react';
-import { CameraControls } from '@react-three/drei';
+import { Suspense, useEffect } from 'react';
+import { CameraControls, Sphere } from '@react-three/drei';
+import { RoomLighting } from '../CanvasTSL/RoomLighting';
+import { CodeEditor } from '../CodeEditor/CodeEditor';
+import { NodeList } from '../SceneGraph/NodeList';
 
 export function EditorGUI({}: {}) {
     //
 
-    let hdrURL = useApp((r) => r.hdrURL);
     let activeNodeHash = useApp((r) => r.activeNodeHash);
 
     let useMyStore = useStoreOfApp();
@@ -23,71 +19,39 @@ export function EditorGUI({}: {}) {
     useEffect(() => {
         window.dispatchEvent(new CustomEvent('activeNodeHash', { detail: { activeNodeHash } }));
     }, [activeNodeHash]);
+
     return (
         <>
             <div className='w-full h-full relative flex'>
-                {/* <div className='w-[285px] h-full  bg-gray-100'>Left</div> */}
-                <div className=' h-full shrink-0' style={{ width: `calc(100% - 285px * 1)` }}>
-                    <div className='bg-gray-100' style={{ height: `calc(35px)` }}></div>
-                    <div className='w-full relative flex' style={{ height: `calc(100% - 35px * 2)` }}>
-                        {activeNodeHash && (
-                            <div className='relative' style={{ width: `40%`, height: `100%` }}>
-                                <EditGraph></EditGraph>
-                                <div className=' absolute top-2 right-2'>
-                                    <button
-                                        className='cursor-pointer'
-                                        onClick={() => {
-                                            //
-                                            useMyStore.setState({
-                                                activeNodeHash: '',
-                                            });
-                                        }}
-                                    >
-                                        <CircleXIcon color='red' className='size-8 ml-2'></CircleXIcon>
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-                        <div className='relative' style={activeNodeHash ? { width: `calc(100% - 40%)`, height: `100%` } : { width: `100%`, height: `100%` }}>
+                <div className=' h-full shrink-0 border-r' style={{ width: `calc(250px)` }}>
+                    {/*  */}
+                    <NodeList></NodeList>
+                </div>
+                <div className=' h-full shrink-0' style={{ width: `calc(100% - 350px - 250px)` }}>
+                    {/*  */}
+                </div>
+                <div className='w-[350px] shrink-0 overflow-y-scroll h-full  bg-gray-100'>
+                    <div className='h-full w-full'>
+                        <div className='mb-1 h-[350px]'>
                             <CanvasTSL>
-                                {hdrURL && <EnvLight hdrURL={hdrURL}></EnvLight>}
+                                <Suspense fallback={null}>
+                                    <ApplyGraphToScene></ApplyGraphToScene>
+                                </Suspense>
+
+                                <RoomLighting></RoomLighting>
 
                                 <CameraControls></CameraControls>
 
-                                <ApplyGraphToScene></ApplyGraphToScene>
-
+                                <Sphere scale={2}>
+                                    <meshStandardMaterial></meshStandardMaterial>
+                                </Sphere>
                                 {/*  */}
                             </CanvasTSL>
-
-                            <div className=' absolute top-3 left-3'>
-                                <SceneGraphGUI></SceneGraphGUI>
+                        </div>
+                        <div className='w-full' style={{ height: `calc(100% - 350px)` }}>
+                            <div className='w-full h-full'>
+                                <CodeEditor></CodeEditor>
                             </div>
-                        </div>
-                    </div>
-                    <div className='bg-gray-100' style={{ height: `calc(35px)` }}></div>
-                </div>
-                <div className='w-[285px] overflow-y-scroll h-full  bg-gray-100'>
-                    <div className='p-2'>
-                        <div className='mb-1'>
-                            <DayTimeControls show={true}></DayTimeControls>
-                        </div>
-                        <div className='mb-1'>
-                            <OrbitSunControls show={true}></OrbitSunControls>
-                        </div>
-                        <div className='mb-1'>
-                            <RenderOptions></RenderOptions>
-                        </div>
-
-                        <div className='mb-1'>
-                            <HDRSearch
-                                onHDR={(val) => {
-                                    console.log(`${val.hdr.cdn}${val.hdr.hdr}`);
-
-                                    useMyStore.setState({
-                                        hdrURL: `${val.hdr.cdn}${val.hdr.hdr}`,
-                                    });
-                                }}
-                            ></HDRSearch>
                         </div>
                     </div>
                 </div>

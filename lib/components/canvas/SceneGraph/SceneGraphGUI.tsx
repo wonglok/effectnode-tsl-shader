@@ -1,12 +1,32 @@
 import { BufferGeometry, Color, Mesh, MeshPhysicalMaterial, MeshStandardMaterial, Object3D } from 'three';
-import { EachPatch, getActiveO3D, getIDFromO3D, useApp, useStoreOfApp } from '../CanvasEditor/AppContext';
+import { type EachPatch, getActiveO3D, getIDFromO3D, useApp, useStoreOfApp } from '../CanvasEditor/AppContext';
 import { Input } from '../../ui/input';
 
 // @ts-ignore
 import dagre from 'dagre';
 import { useThree } from '@react-three/fiber';
 import { Button } from '../../ui/button';
-import { ArrowRight, BanIcon, BoxIcon, CircleXIcon, CloudOffIcon, Cross, CrossIcon, DeleteIcon, EggOffIcon, EraserIcon, MemoryStickIcon, PenOffIcon, Search, Settings, SettingsIcon, Share2Icon, ShareIcon, XIcon } from 'lucide-react';
+import {
+    //
+    ArrowRight,
+    BanIcon,
+    BoxIcon,
+    CircleXIcon,
+    CloudOffIcon,
+    Cross,
+    CrossIcon,
+    DeleteIcon,
+    EggOffIcon,
+    EraserIcon,
+    MemoryStickIcon,
+    PenOffIcon,
+    Search,
+    Settings,
+    SettingsIcon,
+    Share2Icon,
+    ShareIcon,
+    XIcon,
+} from 'lucide-react';
 // import { v4 } from 'uuid';
 // import md5 from 'md5';
 

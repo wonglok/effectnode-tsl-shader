@@ -1,9 +1,10 @@
 {
   "name": "@effectnode/tsl-shader",
-  "private": false,
+  "license": "MIT",
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "deploy": "npm publish --access public",
     "dev": "vite",
     "build": "tsc -b && vite build; vite build --config ./vite.config.docs.jsx",
     "lint": "eslint .",

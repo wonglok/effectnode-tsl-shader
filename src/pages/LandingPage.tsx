@@ -73,24 +73,25 @@ export function LandingPage() {
 
                         {/* <span className="absolute inset-0 size-full bg-black opacity-20"></span> */}
                     </div>
-                    <div className='pointer-events-none relative mx-auto'>
-                        <div className='pointer-events-none flex flex-col justify-center items-center'>
-                            <div className='pointer-events-none mx-auto px-4 text-center'>
-                                <div className='pointer-events-none'>
-                                    <h1 className=' pointer-events-none text-5xl font-semibold text-white'>{`Effect Node TSL Studio`}</h1>
-                                    <p className=' pointer-events-none mt-4 text-xl font-bold text-gray-200'>{`Framework & Developer Tools for WebGL & WebGPU`}</p>
-                                    <p className=' pointer-events-none mt-4 text-lg text-gray-200 mb-5'>{`DevTools to Save Time, Solution Code Template to Save Money`}</p>
+                    <div className=' relative mx-auto'>
+                        <div className=' flex flex-col justify-center items-center'>
+                            <div className=' mx-auto px-4 text-center'>
+                                <div className=''>
+                                    <h1 className='  text-5xl font-semibold text-white'>{`Effect Node TSL Studio`}</h1>
+                                    <p className='  mt-4 text-xl px-4 text-gray-900 p-2 bg-gray-100 inline-block rounded-2xl'>{`npm i @ffectnode/tsl-shader --save`}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div className='h-5'></div>
 
                     <div className='relative mx-auto'>
                         <div className='select-none'>
                             <div>
                                 <NavLink to={`/studio`}>
                                     <button className=' bg-blue-500 text-white inline-block p-3 px-6 text-2xl border rounded-lg mx-2 cursor-pointer'>
-                                        <>Launch Studio</>
+                                        <>Launch App</>
                                     </button>
                                 </NavLink>
                                 <div className='text-white py-2 text-center'>No need login 🥰</div>

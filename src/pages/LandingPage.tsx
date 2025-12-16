@@ -9,7 +9,6 @@ import {
     faEarthAsia,
     faFastForward,
     faInbox,
-    faPerson,
     faSatelliteDish,
 } from '@fortawesome/free-solid-svg-icons';
 

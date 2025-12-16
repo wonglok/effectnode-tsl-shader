@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 // import { Login } from './pages/Login.tsx';
 // import { Register } from './pages/Register.tsx';
 import { LandingPage } from './pages/LandingPage.tsx';
-import { Studio } from './pages/Studio.tsx';
+import { StudioPage } from './pages/StudioPage.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
         <BrowserRouter>
             <Routes>
                 <Route index element={<LandingPage />} />
-                <Route path='studio' element={<Studio />} />
+                <Route path='studio' element={<StudioPage />} />
 
                 {/* <Route element={<AuthLayout />}>
                     <Route path='login' element={<Login />} />

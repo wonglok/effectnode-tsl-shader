@@ -16,45 +16,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { NavLink } from 'react-router';
 
-// import { FastClothCompo } from 'src/components/FastCloth/FastClothCompo'
-
-// export function PageOld() {
-//     return (
-//         <>
-//             <div className="p-4 lg:p-12 h-full w-full">
-//                 <div>
-//                     <div>Campus App</div>
-//                     <div className="mb-3">
-//                         <Link href={`/auth`}>Login / Register</Link>
-//                     </div>
-//                 </div>
-
-//                 <Protect noRedirect>
-//                     <div className=" text-2xl mb-3">
-//                         Welcome Back!
-//                     </div>
-
-//                     <div>
-//                         <Link className="ml-3 list-item list-disc underline text-blue-500" href={`/world/dock`}>Dock</Link>
-//                     </div>
-
-//                     <div>
-//                         <Link className="ml-3 list-item list-disc underline text-blue-500" href={`/world/sea`}>Sea</Link>
-//                     </div>
-
-//                     <div>
-//                         <Link className="ml-3 list-item list-disc underline text-blue-500" href={`/world/forest`}>Forest</Link>
-//                     </div>
-//                 </Protect>
-//             </div>
-//         </>
-//     )
-// }
-
-// //
-// //
-// //
-
 export function LandingPage() {
     return (
         <>
@@ -78,7 +39,7 @@ export function LandingPage() {
                             <div className=' mx-auto px-4 text-center'>
                                 <div className=''>
                                     <h1 className='  text-5xl font-semibold text-white'>{`Effect Node TSL Studio`}</h1>
-                                    <p className='  mt-4 text-xl px-4 text-gray-900 p-2 bg-gray-100 inline-block rounded-2xl'>{`npm i @ffectnode/tsl-shader --save`}</p>
+                                    {/* <p className='  mt-4 text-xl px-4 text-gray-900 p-2 bg-gray-100 inline-block rounded-2xl'>{`npm i @ffectnode/tsl-shader --save`}</p> */}
                                 </div>
                             </div>
                         </div>

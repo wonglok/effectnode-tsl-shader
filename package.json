@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "deploy": "npm publish --access public",
+    "deploy": "npm version patch; npm publish --access public",
     "dev": "vite",
     "build": "tsc -b && vite build; vite build --config ./vite.config.docs.jsx",
     "lint": "eslint .",

@@ -4,6 +4,7 @@ import Navbar from '../components/UIKit/Navbars/AuthNavbar.jsx';
 import {
     //
     faBookOpen,
+    faBox,
     faCubes,
     faEarthAsia,
     faFastForward,
@@ -166,46 +167,44 @@ export function LandingPage() {
                                 </div>
                             </div>
 
-                            {
-                                <div className='mt-32 flex flex-wrap items-center'>
-                                    <div className='mx-auto w-full px-4 md:w-5/12'>
-                                        <div className='mb-6 inline-flex size-16 items-center justify-center rounded-full bg-white text-center text-gray-500 shadow-lg'>
-                                            <FontAwesomeIcon className='text-2xl' icon={faEarthAsia} />
-                                        </div>
-                                        <h3 className='mb-2 text-3xl font-semibold leading-normal'>Renderer & Freedom</h3>
-
-                                        <p className='my-4 text-lg font-light leading-relaxed text-gray-600'>
-                                            {`EffectNode is agnositc towards renderers. You can use @react-three/fiber, pure vanilla js,
-                    babalyon.js and three.js or p5.js to suit your needs etc... `}
-                                        </p>
-                                        <p className='my-4 text-lg font-light leading-relaxed text-gray-600'>{`Organise huge amount of algorithms into workspaces.`}</p>
-                                        <p className='mb-4 mt-0 text-lg font-light leading-relaxed text-gray-600'>{`Developing Node and Connection driven software has been more and more fun!`}</p>
-
-                                        <div className='mb-4'>
-                                            <div className='w-full h-[300px] bg-purple-500 rounded-2xl'></div>
-
-                                            {/* <img alt="slide" src={`/img/dash.png`} /> */}
-                                        </div>
+                            <div className='mt-32 flex flex-wrap items-center'>
+                                <div className='mx-auto w-full px-4 md:w-5/12'>
+                                    <div className='mb-6 inline-flex size-16 items-center justify-center rounded-full bg-white text-center text-gray-500 shadow-lg'>
+                                        <FontAwesomeIcon className='text-2xl' icon={faEarthAsia} />
                                     </div>
+                                    <h3 className='mb-2 text-3xl font-semibold leading-normal'>Renderer & Freedom</h3>
 
-                                    <div className='mx-auto w-full px-4 md:w-4/12'>
-                                        <div className='relative mb-6 flex w-full min-w-0 flex-col  rounded-lg bg-gray-700 shadow-lg'>
-                                            {/* <img
+                                    <p className='my-4 text-lg font-light leading-relaxed text-gray-600'>
+                                        {`EffectNode is agnositc towards renderers. You can use @react-three/fiber, pure vanilla js,
+                    babalyon.js and three.js or p5.js to suit your needs etc... `}
+                                    </p>
+                                    <p className='my-4 text-lg font-light leading-relaxed text-gray-600'>{`Organise huge amount of algorithms into workspaces.`}</p>
+                                    <p className='mb-4 mt-0 text-lg font-light leading-relaxed text-gray-600'>{`Developing Node and Connection driven software has been more and more fun!`}</p>
+
+                                    <div className='mb-4'>
+                                        <div className='w-full h-[300px] bg-purple-500 rounded-2xl'></div>
+
+                                        {/* <img alt="slide" src={`/img/dash.png`} /> */}
+                                    </div>
+                                </div>
+
+                                <div className='mx-auto w-full px-4 md:w-4/12'>
+                                    <div className='relative mb-6 flex w-full min-w-0 flex-col  rounded-lg bg-gray-700 shadow-lg'>
+                                        {/* <img
                         alt="..."
                         src="/img/node-editor.png"
                         className="w-full rounded-t-lg align-middle"
                       /> */}
-                                            <div className='w-full h-[300px] bg-purple-500 rounded-t-lg align-middle'></div>
+                                        <div className='w-full h-[300px] bg-purple-500 rounded-t-lg align-middle'></div>
 
-                                            <blockquote className='relative mb-4 p-8'>
-                                                <h4 className='text-xl font-bold text-white'>Node I/O System for Data ART</h4>
-                                                <p className='text-md mt-2 font-light text-white'>Oragnise huge sum of code into modules and fine tune the visuals.</p>
-                                                <p className='text-md mt-2 font-light text-white'>Good for data viuslations and data arts.</p>
-                                            </blockquote>
-                                        </div>
+                                        <blockquote className='relative mb-4 p-8'>
+                                            <h4 className='text-xl font-bold text-white'>Node I/O System for Data ART</h4>
+                                            <p className='text-md mt-2 font-light text-white'>Oragnise huge sum of code into modules and fine tune the visuals.</p>
+                                            <p className='text-md mt-2 font-light text-white'>Good for data viuslations and data arts.</p>
+                                        </blockquote>
                                     </div>
                                 </div>
-                            }
+                            </div>
                         </div>
                     </section>
                 )}
@@ -246,7 +245,7 @@ export function LandingPage() {
                                     <div className='mx-auto w-full px-4 md:w-5/12 mt-4'>
                                         <div className='md:pr-12'>
                                             <div className='mb-6 inline-flex size-16 items-center justify-center rounded-full bg-gray-200 p-3 text-center text-gray-500 shadow-lg'>
-                                                <FontAwesomeIcon className='size-6' icon={faPerson}></FontAwesomeIcon>
+                                                <FontAwesomeIcon className='size-6' icon={faBox}></FontAwesomeIcon>
                                             </div>
                                             <h3 className='text-3xl font-semibold'>{`EffectNode TSL Studio`}</h3>
                                             <p className='mt-4 text-lg leading-relaxed text-gray-500'>{`We are building a lot of example codes for you to clone from github to get started. `}</p>

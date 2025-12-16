@@ -20,6 +20,7 @@ export default function Footer() {
           className=" absolute top-0 left-0 right-0 w-full  pointer-events-none overflow-hidden -mt-20 h-20"
           style={{ transform: "translateY(1px)" }}
         >
+          {/*  */}
           {/* <svg
             className="absolute bottom-0 overflow-hidden"
             xmlns="http://www.w3.org/2000/svg"
@@ -173,13 +174,15 @@ export default function Footer() {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-500 font-semibold py-1">
-                Copyright © {new Date().getFullYear()} WONG LOK by{" "}
+                Made by{" "}
                 <a
                   href="https://twitter.com/wonglok831"
-                  className="text-gray-500 hover:text-gray-800"
+                  className="text-gray-500 hover:text-gray-800 mr-1"
                 >
                   @wonglok831
                 </a>
+                with Joy
+                <div>MIT Licensed</div>
               </div>
             </div>
           </div>

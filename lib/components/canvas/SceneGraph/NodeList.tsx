@@ -25,16 +25,16 @@ export function NodeList() {
     };
     return (
         <>
-            <div className='px-3 py-3' style={{ height: `80px` }}>
+            <div className='px-3 pt-3' style={{ height: `75px` }}>
                 <input
-                    className='w-full h-full bg-gray-200 py-3 px-2'
+                    className='w-full h-full bg-gray-200 py-3 px-3 rounded-lg'
                     value={query}
                     onChange={({ target: { value } }) => {
                         setQuery(value);
                     }}
                 ></input>
             </div>
-            <div className='w-full h-full overflow-y-scroll px-3' style={{ height: `calc(100% - 80px)` }}>
+            <div className='w-full h-full overflow-y-scroll px-3' style={{ height: `calc(100% - 75px)` }}>
                 {categories
                     .filter((cate) => {
                         let result = nodes.filter((r) => r.category === cate).filter(filterNodeFnc);
@@ -44,8 +44,8 @@ export function NodeList() {
                     .map((cate, ci) => {
                         return (
                             <div className='text-left ' key={cate + ci}>
-                                <div className='my-2 text-center sticky top-0'>
-                                    <div className='p-2 bg-amber-200 text-gray-800 text-sm'>{cate}</div>
+                                <div className='my-3 text-center sticky top-3 z-10'>
+                                    <div className='p-2 bg-amber-200 text-gray-800 text-sm rounded-lg shadow-lg'>{cate}</div>
                                 </div>
 
                                 <div className=''>
@@ -54,7 +54,7 @@ export function NodeList() {
                                         .filter(filterNodeFnc)
                                         .map((node, ni) => {
                                             return (
-                                                <div key={node.codeName + ni} className='p-2 even:bg-gray-50  odd:bg-amber-50  overflow-scroll hover:opacity-50 cursor-grab select-none'>
+                                                <div key={node.codeName + ni} className='p-3 even:bg-gray-50  odd:bg-amber-50  overflow-scroll hover:opacity-50 cursor-grab select-none mb-3 rounded-2xl shadow-inner'>
                                                     <div className='text-sm'>{node.codeName}</div>
                                                     <div className='text-xs text-gray-500 '>{node.description}</div>
                                                 </div>

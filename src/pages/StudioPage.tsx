@@ -19,10 +19,6 @@ export function StudioPage() {
         }
 
         //
-
-        //
-        // console.log('d', array.join(','), ','); //
-        //
     }, []);
 
     return (

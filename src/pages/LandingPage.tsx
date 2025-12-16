@@ -90,7 +90,7 @@ export function LandingPage() {
                         <div className='select-none'>
                             <div>
                                 <NavLink to={`/studio`}>
-                                    <button className=' bg-blue-500 text-white inline-block p-3 px-6 text-2xl border rounded-lg mx-2'>
+                                    <button className=' bg-blue-500 text-white inline-block p-3 px-6 text-2xl border rounded-lg mx-2 cursor-pointer'>
                                         <>Launch Studio</>
                                     </button>
                                 </NavLink>

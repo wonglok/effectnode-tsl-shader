@@ -4,9 +4,9 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 // import { AuthLayout } from './layout/AuthLayout.tsx';
 // import { Login } from './pages/Login.tsx';
 // import { Register } from './pages/Register.tsx';
+import { LandingPage } from './pages/LandingPage.tsx';
+import { Studio } from './pages/Studio.tsx';
 import './index.css';
-import { LandingPage } from './LandingPage.tsx';
-import { Studio } from '../lib/main.ts';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>

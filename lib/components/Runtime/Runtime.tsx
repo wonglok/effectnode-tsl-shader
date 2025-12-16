@@ -1,3 +1,7 @@
 export function Runtime() {
-    return <></>;
+    return (
+        <>
+            <div>Runtime</div>
+        </>
+    );
 }

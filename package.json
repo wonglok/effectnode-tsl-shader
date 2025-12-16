@@ -5,11 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build; vite build --config ./vite.config.docs.js",
+    "build": "tsc -b && vite build; vite build --config ./vite.config.docs.jsx",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@popperjs/core": "^2.11.8",
     "@tailwindcss/vite": "^4.1.18",
     "@xyflow/react": "^12.10.0",
     "build": "^0.1.4",
@@ -35,8 +39,8 @@
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
   },
-  "main": "./dist/effectnode-tsl-shader.umd.js",
-  "module": "./dist/effectnode-tsl-shader.es.js",
+  "main": "./dist/effectnode-tsl-shader.umd.jsx",
+  "module": "./dist/effectnode-tsl-shader.es.jsx",
   "types": "./dist/main.d.ts",
   "files": [
     "dist"
@@ -44,6 +48,6 @@
   "peerDependencies": {
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "three":  "^0.182.0"
+    "three": "^0.182.0"
   }
 }

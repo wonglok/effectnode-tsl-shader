@@ -1,3 +1,3 @@
-export function Reusable() {
+export function Runtime() {
     return <></>;
 }

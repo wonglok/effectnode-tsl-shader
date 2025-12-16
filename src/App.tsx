@@ -4,7 +4,7 @@ import { Button } from '../lib/main';
 function App() {
     return (
         <>
-            App aa
+            App 123
             <Button></Button>
         </>
     );

@@ -8,6 +8,7 @@ import { LandingPage } from './pages/LandingPage.tsx';
 import { StudioPage } from './pages/StudioPage.tsx';
 
 import './index.css';
+import '@xyflow/react/dist/style.css';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>

@@ -7,9 +7,9 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     plugins: [
         //
-        tailwindcss(),
         react(),
         dts({ include: ['lib'], tsconfigPath: './tsconfig.app.json' }),
+        tailwindcss(),
     ], // Include lib folder for types
     build: {
         lib: {

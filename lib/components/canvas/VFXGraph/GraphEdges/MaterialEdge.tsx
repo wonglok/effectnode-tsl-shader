@@ -1,6 +1,7 @@
 import { BaseEdge, getStraightPath } from '@xyflow/react';
 
-export function MaterailEdge({ id, sourceX, sourceY, targetX, targetY }: any) {
+export const name = 'MaterailEdge';
+export default function MaterailEdge({ id, sourceX, sourceY, targetX, targetY }: any) {
     const [edgePath] = getStraightPath({
         sourceX,
         sourceY,

@@ -12,8 +12,9 @@ import { create } from 'zustand';
 const getDataTemplate = () => {
     return {
         //
-
-        patches: [] as EachPatch[],
+        nodes: [] as EachNode[],
+        edges: [] as EachEdge[],
+        //
     };
 };
 

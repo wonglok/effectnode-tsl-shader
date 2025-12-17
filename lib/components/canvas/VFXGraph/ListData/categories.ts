@@ -1,5 +1,5 @@
 export const categories = [
-    'ConstantsAndConversions',
+    'Constants',
     'MethodChainingConversions',
     'Uniform',
     'Textures',

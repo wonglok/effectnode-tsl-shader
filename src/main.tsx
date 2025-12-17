@@ -9,12 +9,14 @@ import { StudioPage } from './pages/StudioPage.tsx';
 
 import './index.css';
 import '@xyflow/react/dist/style.css';
+import { Game03Page } from './pages/Game03Page.tsx';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <BrowserRouter>
             <Routes>
                 <Route index element={<LandingPage />} />
+                <Route path='game' element={<Game03Page></Game03Page>} />
                 <Route path='studio' element={<StudioPage />} />
 
                 {/* <Route element={<AuthLayout />}>

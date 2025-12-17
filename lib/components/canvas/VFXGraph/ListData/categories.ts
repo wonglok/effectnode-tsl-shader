@@ -1,4 +1,5 @@
 export const categories = [
+    'Materials',
     'Constants',
     'MethodChainingConversions',
     'Uniform',

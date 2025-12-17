@@ -48,14 +48,12 @@ function VFXEditor({}: {}) {
         const newNode: any = {
             id: getId(),
             displayName: type,
-            type: type,
+            type: 'AnyNode',
             position: position,
-            data: { value: 0, min: 0, max: 1 },
+            data: { type, value: 0, min: 0, max: 1 },
         };
 
-        if (nodeTypes[type]) {
-            newNode.dragHandle = '.drag-handle__custom';
-        }
+        newNode.dragHandle = '.drag-handle__custom';
 
         useMyStore.setState({
             nodes: [...nodes, newNode],

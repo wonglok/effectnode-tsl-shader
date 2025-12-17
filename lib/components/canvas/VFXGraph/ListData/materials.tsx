@@ -1,7 +1,13 @@
 export const materials = [
     {
-        material: 'NodeMaterialSlots',
-        inputs: [
+        codeName: 'NodeMaterial',
+
+        category: 'Materials',
+        dataType: '',
+        description: 'NodeMaterial Material Slots',
+        sources: [],
+
+        targets: [
             {
                 name: 'fragmentNode',
                 type: 'vec4',
@@ -84,30 +90,94 @@ export const materials = [
             },
         ],
     },
+
     {
-        material: 'LineDashedNodeMaterial',
-        inputs: [
+        codeName: 'MeshPhongNodeMaterial',
+        category: 'Materials',
+        dataType: '',
+        description: 'MeshPhongNodeMaterial Material Slots',
+        sources: [],
+        targets: [
             {
-                name: 'dashScaleNode',
+                name: 'fragmentNode',
+                type: 'vec4',
+            },
+            {
+                name: 'vertexNode',
+                type: 'vec4',
+            },
+            {
+                name: 'geometryNode',
+                type: 'Fn()',
+            },
+            {
+                name: 'colorNode',
+                type: 'vec4',
+            },
+            {
+                name: 'depthNode',
                 type: 'float',
             },
             {
-                name: 'dashSizeNode',
+                name: 'opacityNode',
                 type: 'float',
             },
             {
-                name: 'gapSizeNode',
+                name: 'alphaTestNode',
                 type: 'float',
             },
             {
-                name: 'offsetNode',
+                name: 'emissiveNode',
+                type: 'color',
+            },
+            {
+                name: 'normalNode',
+                type: 'vec3',
+            },
+            {
+                name: 'lightsNode',
+                type: 'lights()',
+            },
+            {
+                name: 'envNode',
+                type: 'color',
+            },
+            {
+                name: 'backdropNode',
+                type: 'vec3',
+            },
+            {
+                name: 'backdropAlphaNode',
                 type: 'float',
             },
-        ],
-    },
-    {
-        material: 'MeshPhongNodeMaterial',
-        inputs: [
+            {
+                name: 'positionNode',
+                type: 'vec3',
+            },
+            {
+                name: 'castShadowNode',
+                type: 'vec4',
+            },
+            {
+                name: 'receivedShadowNode',
+                type: 'Fn()',
+            },
+            {
+                name: 'shadowPositionNode',
+                type: 'vec3',
+            },
+            {
+                name: 'aoNode',
+                type: 'float',
+            },
+            {
+                name: 'mrtNode',
+                type: 'mrt()',
+            },
+            {
+                name: 'outputNode',
+                type: 'vec4',
+            },
             {
                 name: 'shininessNode',
                 type: 'float',
@@ -118,9 +188,94 @@ export const materials = [
             },
         ],
     },
+
     {
-        material: 'MeshStandardNodeMaterial',
-        inputs: [
+        codeName: 'MeshStandardNodeMaterial',
+        category: 'Materials',
+        dataType: '',
+        description: 'MeshStandardNodeMaterial Material Slots',
+        sources: [],
+        targets: [
+            {
+                name: 'fragmentNode',
+                type: 'vec4',
+            },
+            {
+                name: 'vertexNode',
+                type: 'vec4',
+            },
+            {
+                name: 'geometryNode',
+                type: 'Fn()',
+            },
+            {
+                name: 'colorNode',
+                type: 'vec4',
+            },
+            {
+                name: 'depthNode',
+                type: 'float',
+            },
+            {
+                name: 'opacityNode',
+                type: 'float',
+            },
+            {
+                name: 'alphaTestNode',
+                type: 'float',
+            },
+            {
+                name: 'emissiveNode',
+                type: 'color',
+            },
+            {
+                name: 'normalNode',
+                type: 'vec3',
+            },
+            {
+                name: 'lightsNode',
+                type: 'lights()',
+            },
+            {
+                name: 'envNode',
+                type: 'color',
+            },
+            {
+                name: 'backdropNode',
+                type: 'vec3',
+            },
+            {
+                name: 'backdropAlphaNode',
+                type: 'float',
+            },
+            {
+                name: 'positionNode',
+                type: 'vec3',
+            },
+            {
+                name: 'castShadowNode',
+                type: 'vec4',
+            },
+            {
+                name: 'receivedShadowNode',
+                type: 'Fn()',
+            },
+            {
+                name: 'shadowPositionNode',
+                type: 'vec3',
+            },
+            {
+                name: 'aoNode',
+                type: 'float',
+            },
+            {
+                name: 'mrtNode',
+                type: 'mrt()',
+            },
+            {
+                name: 'outputNode',
+                type: 'vec4',
+            },
             {
                 name: 'metalnessNode',
                 type: 'float',
@@ -132,8 +287,101 @@ export const materials = [
         ],
     },
     {
-        material: 'MeshPhysicalNodeMaterial',
-        inputs: [
+        codeName: 'MeshPhysicalNodeMaterial',
+        category: 'Materials',
+        dataType: '',
+        description: 'MeshPhysicalNodeMaterial Material Slots',
+        sources: [],
+        targets: [
+            {
+                name: 'fragmentNode',
+                type: 'vec4',
+            },
+            {
+                name: 'vertexNode',
+                type: 'vec4',
+            },
+            {
+                name: 'geometryNode',
+                type: 'Fn()',
+            },
+            {
+                name: 'colorNode',
+                type: 'vec4',
+            },
+            {
+                name: 'depthNode',
+                type: 'float',
+            },
+            {
+                name: 'opacityNode',
+                type: 'float',
+            },
+            {
+                name: 'alphaTestNode',
+                type: 'float',
+            },
+            {
+                name: 'emissiveNode',
+                type: 'color',
+            },
+            {
+                name: 'normalNode',
+                type: 'vec3',
+            },
+            {
+                name: 'lightsNode',
+                type: 'lights()',
+            },
+            {
+                name: 'envNode',
+                type: 'color',
+            },
+            {
+                name: 'backdropNode',
+                type: 'vec3',
+            },
+            {
+                name: 'backdropAlphaNode',
+                type: 'float',
+            },
+            {
+                name: 'positionNode',
+                type: 'vec3',
+            },
+            {
+                name: 'castShadowNode',
+                type: 'vec4',
+            },
+            {
+                name: 'receivedShadowNode',
+                type: 'Fn()',
+            },
+            {
+                name: 'shadowPositionNode',
+                type: 'vec3',
+            },
+            {
+                name: 'aoNode',
+                type: 'float',
+            },
+            {
+                name: 'mrtNode',
+                type: 'mrt()',
+            },
+            {
+                name: 'outputNode',
+                type: 'vec4',
+            },
+            {
+                name: 'metalnessNode',
+                type: 'float',
+            },
+            {
+                name: 'roughnessNode',
+                type: 'float',
+            },
+            //
             {
                 name: 'clearcoatNode',
                 type: 'float',
@@ -200,9 +448,40 @@ export const materials = [
             },
         ],
     },
+
+    //
     {
-        material: 'SpriteNodeMaterial',
-        inputs: [
+        codeName: 'LineDashedNodeMaterial',
+        category: 'Materials',
+        dataType: '',
+        description: 'LineDashedNodeMaterial Material Slots',
+        sources: [],
+        targets: [
+            {
+                name: 'dashScaleNode',
+                type: 'float',
+            },
+            {
+                name: 'dashSizeNode',
+                type: 'float',
+            },
+            {
+                name: 'gapSizeNode',
+                type: 'float',
+            },
+            {
+                name: 'offsetNode',
+                type: 'float',
+            },
+        ],
+    },
+    {
+        codeName: 'SpriteNodeMaterial',
+        category: 'Materials',
+        dataType: '',
+        description: 'SpriteNodeMaterial Material Slots',
+        sources: [],
+        targets: [
             {
                 name: 'positionNode',
                 type: 'vec3',

@@ -1,244 +1,395 @@
+import { materials } from './materials';
 export const nodes = [
+    ...materials,
     {
         category: 'Constants',
         codeName: 'float',
         dataType: 'float',
         description: 'Returns a constant or conversion of type float',
+        targets: [],
+        sources: [
+            {
+                name: 'float',
+                type: 'float',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'int',
         dataType: 'int',
         description: 'Returns a constant or conversion of type int',
+        targets: [],
+        sources: [
+            {
+                name: 'int',
+                type: 'int',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'uint',
         dataType: 'uint',
         description: 'Returns a constant or conversion of type uint',
+        targets: [],
+        sources: [
+            {
+                name: 'uint',
+                type: 'uint',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'bool',
-        dataType: 'boolean',
+        dataType: 'bool',
         description: 'Returns a constant or conversion of type boolean',
+        targets: [],
+        sources: [
+            {
+                name: 'boolean',
+                type: 'boolean',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'color',
         dataType: 'color',
         description: 'Returns a constant or conversion of type color',
+        targets: [],
+        sources: [
+            {
+                name: 'color',
+                type: 'color',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'vec2',
         dataType: 'vec2',
         description: 'Returns a constant or conversion of type vec2',
+        targets: [],
+        sources: [
+            {
+                name: 'vec2',
+                type: 'vec2',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'vec3',
         dataType: 'vec3',
         description: 'Returns a constant or conversion of type vec3',
+        targets: [],
+        sources: [
+            {
+                name: 'vec3',
+                type: 'vec3',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'vec4',
         dataType: 'vec4',
         description: 'Returns a constant or conversion of type vec4',
+        targets: [],
+        sources: [
+            {
+                name: 'vec4',
+                type: 'vec4',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'mat2',
         dataType: 'mat2',
         description: 'Returns a constant or conversion of type mat2',
+        targets: [],
+        sources: [
+            {
+                name: 'mat2',
+                type: 'mat2',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'mat3',
         dataType: 'mat3',
         description: 'Returns a constant or conversion of type mat3',
+        targets: [],
+        sources: [
+            {
+                name: 'mat3',
+                type: 'mat3',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'mat4',
         dataType: 'mat4',
         description: 'Returns a constant or conversion of type mat4',
+        targets: [],
+        sources: [
+            {
+                name: 'mat4',
+                type: 'mat4',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'ivec2',
         dataType: 'ivec2',
         description: 'Returns a constant or conversion of type ivec2',
+        targets: [],
+        sources: [
+            {
+                name: 'ivec2',
+                type: 'ivec2',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'ivec3',
         dataType: 'ivec3',
         description: 'Returns a constant or conversion of type ivec3',
+        targets: [],
+        sources: [
+            {
+                name: 'ivec3',
+                type: 'ivec3',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'ivec4',
         dataType: 'ivec4',
         description: 'Returns a constant or conversion of type ivec4',
+        targets: [],
+        sources: [
+            {
+                name: 'ivec4',
+                type: 'ivec4',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'uvec2',
         dataType: 'uvec2',
         description: 'Returns a constant or conversion of type uvec2',
+
+        targets: [],
+        sources: [
+            {
+                name: 'uvec2',
+                type: 'uvec2',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'uvec3',
         dataType: 'uvec3',
         description: 'Returns a constant or conversion of type uvec3',
+
+        targets: [],
+        sources: [
+            {
+                name: 'uvec3',
+                type: 'uvec3',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'uvec4',
         dataType: 'uvec4',
         description: 'Returns a constant or conversion of type uvec4',
+
+        targets: [],
+        sources: [
+            {
+                name: 'uvec4',
+                type: 'uvec4',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'bvec2',
         dataType: 'bvec2',
         description: 'Returns a constant or conversion of type bvec2',
+
+        targets: [],
+        sources: [
+            {
+                name: 'bvec2',
+                type: 'bvec2',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'bvec3',
         dataType: 'bvec3',
         description: 'Returns a constant or conversion of type bvec3',
+
+        targets: [],
+        sources: [
+            {
+                name: 'bvec3',
+                type: 'bvec3',
+            },
+        ],
     },
     {
         category: 'Constants',
         codeName: 'bvec4',
         dataType: 'bvec4',
         description: 'Returns a constant or conversion of type bvec4',
+
+        targets: [],
+        sources: [
+            {
+                name: 'bvec4',
+                type: 'bvec4',
+            },
+        ],
     },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toFloat',
-        dataType: 'float',
-        description: 'Converts to float',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toInt',
-        dataType: 'int',
-        description: 'Converts to int',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toUint',
-        dataType: 'uint',
-        description: 'Converts to uint',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toBool',
-        dataType: 'boolean',
-        description: 'Converts to boolean',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toColor',
-        dataType: 'color',
-        description: 'Converts to color',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toVec2',
-        dataType: 'vec2',
-        description: 'Converts to vec2',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toVec3',
-        dataType: 'vec3',
-        description: 'Converts to vec3',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toVec4',
-        dataType: 'vec4',
-        description: 'Converts to vec4',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toMat2',
-        dataType: 'mat2',
-        description: 'Converts to mat2',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toMat3',
-        dataType: 'mat3',
-        description: 'Converts to mat3',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toMat4',
-        dataType: 'mat4',
-        description: 'Converts to mat4',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toIVec2',
-        dataType: 'ivec2',
-        description: 'Converts to ivec2',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toIVec3',
-        dataType: 'ivec3',
-        description: 'Converts to ivec3',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toIVec4',
-        dataType: 'ivec4',
-        description: 'Converts to ivec4',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toUVec2',
-        dataType: 'uvec2',
-        description: 'Converts to uvec2',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toUVec3',
-        dataType: 'uvec3',
-        description: 'Converts to uvec3',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toUVec4',
-        dataType: 'uvec4',
-        description: 'Converts to uvec4',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toBVec2',
-        dataType: 'bvec2',
-        description: 'Converts to bvec2',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toBVec3',
-        dataType: 'bvec3',
-        description: 'Converts to bvec3',
-    },
-    {
-        category: 'MethodChainingConversions',
-        codeName: 'toBVec4',
-        dataType: 'bvec4',
-        description: 'Converts to bvec4',
-    },
+
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toFloat',
+    //     dataType: 'float',
+    //     description: 'Converts to float',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toInt',
+    //     dataType: 'int',
+    //     description: 'Converts to int',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toUint',
+    //     dataType: 'uint',
+    //     description: 'Converts to uint',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toBool',
+    //     dataType: 'boolean',
+    //     description: 'Converts to boolean',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toColor',
+    //     dataType: 'color',
+    //     description: 'Converts to color',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toVec2',
+    //     dataType: 'vec2',
+    //     description: 'Converts to vec2',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toVec3',
+    //     dataType: 'vec3',
+    //     description: 'Converts to vec3',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toVec4',
+    //     dataType: 'vec4',
+    //     description: 'Converts to vec4',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toMat2',
+    //     dataType: 'mat2',
+    //     description: 'Converts to mat2',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toMat3',
+    //     dataType: 'mat3',
+    //     description: 'Converts to mat3',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toMat4',
+    //     dataType: 'mat4',
+    //     description: 'Converts to mat4',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toIVec2',
+    //     dataType: 'ivec2',
+    //     description: 'Converts to ivec2',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toIVec3',
+    //     dataType: 'ivec3',
+    //     description: 'Converts to ivec3',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toIVec4',
+    //     dataType: 'ivec4',
+    //     description: 'Converts to ivec4',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toUVec2',
+    //     dataType: 'uvec2',
+    //     description: 'Converts to uvec2',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toUVec3',
+    //     dataType: 'uvec3',
+    //     description: 'Converts to uvec3',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toUVec4',
+    //     dataType: 'uvec4',
+    //     description: 'Converts to uvec4',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toBVec2',
+    //     dataType: 'bvec2',
+    //     description: 'Converts to bvec2',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toBVec3',
+    //     dataType: 'bvec3',
+    //     description: 'Converts to bvec3',
+    // },
+    // {
+    //     category: 'MethodChainingConversions',
+    //     codeName: 'toBVec4',
+    //     dataType: 'bvec4',
+    //     description: 'Converts to bvec4',
+    // },
+
+    //
     {
         category: 'Uniform',
         codeName: 'uniform',
